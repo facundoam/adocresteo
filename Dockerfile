@@ -21,4 +21,4 @@ EXPOSE 8080
 #    --port ${PORT}       => use Render's $PORT
 #    --pass-environment   => forward env vars (AZURE_DEVOPS_PAT, etc.) to the stdio server
 #    npx -y @azure-devops/mcp => run the official Microsoft Azure DevOps MCP stdio server
-CMD ["sh", "-c", "mcp-proxy --host=0.0.0.0 --port=${PORT} --pass-environment -- npx -y @azure-devops/mcp ${ORG_NAME}"]
+CMD ["sh", "-c", "mcp-proxy --host=0.0.0.0 --port=${PORT} --pass-environment -- npx -y @azure-devops/mcp ${ORG_NAME} -d core work work-items search wiki"]
